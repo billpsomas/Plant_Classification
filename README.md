@@ -14,6 +14,8 @@ pip install -r requirements.txt
 ```
 
 ## Download datasets
+No matter your operating system, whether you are using Windows, Linux, etc., open your terminal and write the following commands in order to download the datasets.
+
 - Download the EoL training dataset:
 ```
 wget http://otmedia.lirmm.fr/LifeCLEF/PlantCLEF2017/TrainPackages/PlantCLEF2017Train1EOL.tar.gz
