@@ -20,7 +20,7 @@ $ cd plant_classification
 $ mkdir data
 $ cd data
 ```
-You must now have a directory `plant_classification/data'` inside which you will download the datasets.
+You must now have a directory `plant_classification/data` inside which you will download the datasets.
 - Download the EoL training dataset:
 ```
 $ wget http://otmedia.lirmm.fr/LifeCLEF/PlantCLEF2017/TrainPackages/PlantCLEF2017Train1EOL.tar.gz
@@ -42,4 +42,8 @@ $ tar -xfv PlantCLEF2017Test.tar.gz
 
 ## Issues
 There are several issues concering these datasets:
-1. The distribution of samples of every class is not uniform. 
+1. The distribution of samples of every class in training set is not uniform. There is the so called long-tail problem.
+2. There is no explicit split between training and validation.
+3. The test set consists of raw query images, the classes of whom are not equal to the number of classes of the training set. With other words, there are some classes that do not have any sample on test set.
+
+## Solution
