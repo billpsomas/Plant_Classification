@@ -35,8 +35,11 @@ $ wget http://otmedia.lirmm.fr/LifeCLEF/PlantCLEF2017/TestPackage/PlantCLEF2017T
 ```
 $ tar -xfv PlantCLEF2017Train1EOL.tar.gz
 ```
-- Extract the Pl@ntNet test dataset:
+- Extract the Pl@ntNet test set:
 ```
 $ tar -xfv PlantCLEF2017Test.tar.gz
 ```
 
+## Issues
+There are several issues concering these datasets:
+1. The distribution of samples of every class is not uniform. 
