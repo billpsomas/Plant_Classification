@@ -13,5 +13,14 @@ We use [**Tensorflow 2.0**](https://www.tensorflow.org/) alongside with other li
 pip install -r requirements.txt
 ```
 
-## Download PlantClEF2017 training dataset
+## Download datasets
+- Download the EoL training dataset:
+```
 wget http://otmedia.lirmm.fr/LifeCLEF/PlantCLEF2017/TrainPackages/PlantCLEF2017Train1EOL.tar.gz
+```
+- Download the Pl@ntNet test dataset:
+```
+wget http://otmedia.lirmm.fr/LifeCLEF/PlantCLEF2017/TestPackage/PlantCLEF2017Test.tar.gz
+```
+
+## Problems
