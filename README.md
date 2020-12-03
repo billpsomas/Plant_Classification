@@ -14,19 +14,24 @@ pip install -r requirements.txt
 ```
 
 ## Download datasets
-No matter your operating system, whether you are using Windows, Linux, etc., open your terminal and write the following commands in order to download the datasets. Be careful to navigate through your directories in order to download the datasets in a directory you will later remember. We suggest creating a new directory for this named data using the commands:
+No matter your operating system, whether you are using Windows, Linux, etc., open your terminal and write the following commands in order to download the datasets. Be careful to navigate through your directories in order to download the datasets in a directory you will later remember. We suggest creating a new directory for this named "data" using the commands:
 ```
-   cd plant_classification
-   mkdir data
+$ cd plant_classification
+$ mkdir data
+$ cd data
 ```
 
 - Download the EoL training dataset:
 ```
-wget http://otmedia.lirmm.fr/LifeCLEF/PlantCLEF2017/TrainPackages/PlantCLEF2017Train1EOL.tar.gz
+$ wget http://otmedia.lirmm.fr/LifeCLEF/PlantCLEF2017/TrainPackages/PlantCLEF2017Train1EOL.tar.gz
 ```
 - Download the Pl@ntNet test dataset:
 ```
-wget http://otmedia.lirmm.fr/LifeCLEF/PlantCLEF2017/TestPackage/PlantCLEF2017Test.tar.gz
+$ wget http://otmedia.lirmm.fr/LifeCLEF/PlantCLEF2017/TestPackage/PlantCLEF2017Test.tar.gz
 ```
 
-## Problems
+## Extract files
+- Extract the EoL training set:
+```
+$ tar -xfv PlantCLEF2017Train1EOL.tar.gz
+```
