@@ -11,7 +11,7 @@ We use [**Tensorflow 2.0**](https://www.tensorflow.org/) alongside with other li
 The documentation that follows is meant to be as detailed as possible, so that anyone can follow, no matter his level.
 
 ## Install the necessary libraries
-The first step in order to run this code is to download the necessary libraries. Python has a tremendous amount of libraries and this is one of its strongest advantages. Python comes with a package installer and manager called [pip](https://pypi.org/project/pip/), which is by default installed from version 3.4 onwards. In order to install the libraries, run the following command on your Terminal:
+The first step in order to run this code is to download the necessary libraries. Python has a tremendous amount of libraries and this is one of its strongest advantages. Python comes with a package installer and manager called [PIP](https://pypi.org/project/pip/), which is by default installed from version 3.4 onwards. In order to install the libraries, run the following command on your terminal:
 ```
 pip install -r requirements.txt
 ```
@@ -23,7 +23,7 @@ $ cd plant_classification
 $ mkdir data
 $ cd data
 ```
-You must now have a directory `plant_classification/data` inside which you will download the datasets.
+You must now have a `plant_classification/data` directory inside which you will download the datasets.
 - Download the EoL training dataset:
 ```
 $ wget http://otmedia.lirmm.fr/LifeCLEF/PlantCLEF2017/TrainPackages/PlantCLEF2017Train1EOL.tar.gz
@@ -34,6 +34,7 @@ $ wget http://otmedia.lirmm.fr/LifeCLEF/PlantCLEF2017/TestPackage/PlantCLEF2017T
 ```
 
 ## Extract files
+For Linux machines:
 - Extract the EoL training set:
 ```
 $ tar -xfv PlantCLEF2017Train1EOL.tar.gz
@@ -41,6 +42,27 @@ $ tar -xfv PlantCLEF2017Train1EOL.tar.gz
 - Extract the Pl@ntNet test set:
 ```
 $ tar -xfv PlantCLEF2017Test.tar.gz
+```
+For Windows PCs:
+The corresponding way using the terminal (PowerShell) needs a function like the following one that expands the 7Zip functionality. Run this on your terminal: 
+```
+function Expand-Tar($tarFile, $dest) {
+
+    if (-not (Get-Command Expand-7Zip -ErrorAction Ignore)) {
+        Install-Package -Scope CurrentUser -Force 7Zip4PowerShell > $null
+    }
+
+    Expand-7Zip $tarFile $dest
+}
+```
+And then:
+- Extract the EoL training set:
+```
+Expand-Tar PlantCLEF2017Train1EOL.tar.gz
+```
+- Extract the Pl@ntNet test set:
+```
+Expand-Tar PlantCLEF2017Test.tar.gz
 ```
 
 ## Issues
