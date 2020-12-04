@@ -77,4 +77,9 @@ There are several issues concering these datasets:
 3. The test set consists of raw query images, the classes of whom are not equal to the number of classes of the training set. With other words, there are some classes that do not have any sample on test set.
 
 ## Solution
-We use the Tensorflow 2.0 [ImageDataGenerator](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator) in order to process the images. Moreover, we keep the extracted `data/PlantCLEF2017Train1EOL` directory with the 10000 classes, but create a new directory named `data/PlantCLEF2017TestEOL`, in which we aim to add test images for all the classes. 
+We use the Tensorflow 2.0 [ImageDataGenerator](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator) in order to process the images. Moreover, we keep the extracted `data/PlantCLEF2017Train1EOL` training directory with the 10000 classes, but create a new directory named `data/PlantCLEF2017StructuredTest`, which is aimed to be more structured than the `data/PlantCLEF2017Test` (concerning the way the images are organized in folders) and to include test images for all the classes. We follow the formulation of the training directory and create folders named after the classes to which they correspond. We fill those folders with images of the corresponding classes. To do so, run:
+```
+python create_structured_test_set.py
+``` 
+
+We notice tha
