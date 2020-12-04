@@ -89,4 +89,4 @@ python fill_structured_test_set.py
 
 In order to split the training set into training and validation, we make use of ImageDataGenerator. The file ```create_generators.py``` is responsible for defining the three generators, one for training, one for validation and one for test. We choose the 90%/10% split for the training/validation.
 
-As long as the long-tail problem is concerned, we choose to augment our data (create fake data), so that each training class has exactly 1000 images. 
+As long as the long-tail problem is concerned, we choose to augment our data (create fake data), so that each training class has exactly 1000 images. Some of the transformations we conduct are: rescale, rotation, zoom, width shift, height shift, etc. This is not done on the fly, but a priori and the augmented images are stored in ```/data/PlantCLEF2017Train1EOL/augmented_data/```. This whole procedure can be seen in ```data_augmentation.py```. 
