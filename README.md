@@ -34,7 +34,7 @@ $ wget http://otmedia.lirmm.fr/LifeCLEF/PlantCLEF2017/TestPackage/PlantCLEF2017T
 ```
 
 ## Extract files
-For Linux machines:
+For **Linux** machines:
 - Extract the EoL training set:
 ```
 $ tar -xfv PlantCLEF2017Train1EOL.tar.gz
@@ -43,7 +43,8 @@ $ tar -xfv PlantCLEF2017Train1EOL.tar.gz
 ```
 $ tar -xfv PlantCLEF2017Test.tar.gz
 ```
-For Windows PCs:
+For **Windows** PCs:
+
 The corresponding way using the terminal (PowerShell) needs a function like the following one that expands the 7Zip functionality. Run this on your terminal: 
 ```
 function Expand-Tar($tarFile, $dest) {
