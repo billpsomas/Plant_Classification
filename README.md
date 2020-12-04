@@ -65,6 +65,8 @@ Expand-Tar PlantCLEF2017Train1EOL.tar.gz
 ```
 Expand-Tar PlantCLEF2017Test.tar.gz
 ```
+Of course, once you are using Windows, there is also the naive way of using a software like [7zip](https://www.7-zip.org
+) to unzip those folders in the respective directories.
 
 ## Issues
 There are several issues concering these datasets:
