@@ -8,7 +8,10 @@ This repository contains code written explicitly in [**Python 3**](https://www.p
 
 We use [**Tensorflow 2.0**](https://www.tensorflow.org/) alongside with other libraries for the implementation. We also use the [**PlantCLEF2017**](https://www.imageclef.org/lifeclef/2017/plant) competition dataset, which consists of the "trusted" training set based on the online collaborative [**Encyclopedia Of Life (EoL)**](https://eol.org/), the "noisy" training set built through web crawlers (Google and Bing image search results) and the test dataset, which is a large sample of the raw query images submitted by the users of the mobile application [**Pl@ntNet**](https://play.google.com/store/apps/details?id=org.plantnet).
 
+The documentation that follows is meant to be as detailed as possible, so that anyone can follow, no matter his level.
+
 ## Install the necessary libraries
+The first step in order to run this code is to download the necessary libraries. Python has a tremendous amount of libraries and this is one of its strongest advantages. Python comes with a package installer and manager called [pip](https://pypi.org/project/pip/), which is by default installed from version 3.4 onwards. In order to install the libraries, run the following command on your Terminal:
 ```
 pip install -r requirements.txt
 ```
@@ -47,3 +50,4 @@ There are several issues concering these datasets:
 3. The test set consists of raw query images, the classes of whom are not equal to the number of classes of the training set. With other words, there are some classes that do not have any sample on test set.
 
 ## Solution
+We use the Tensorflow 2.0 [ImageDataGenerator](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator) in order to process the images. Moreover, we keep the extracted `data/PlantCLEF2017Train1EOL` directory with the 10000 classes, but create a new directory named `data/PlantCLEF2017TestEOL`, in which we aim to add test images for all the classes. 
