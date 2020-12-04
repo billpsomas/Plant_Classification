@@ -6,8 +6,13 @@ import os
 import shutil
 import random
 
-train_dataset_dir = "D:/advent/data/PlantCLEF2017Train1EOL/data/"
-test_dataset_dir = "D:/advent/data/PlantCLEF2017TestEOL/data/"
+from pathlib import Path
+
+# Get the current working directory
+dir = os.getcwd()
+
+train_dataset_dir = Path(dir + "/data/PlantCLEF2017Train1EOL/data/")
+test_dataset_dir = Path(dir + "/data/PlantCLEF2017StructuredTest/data/")
 
 train_classes = [x for x in os.listdir(train_dataset_dir)]
 test_classes = [x for x in os.listdir(test_dataset_dir)]

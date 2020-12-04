@@ -82,4 +82,7 @@ We use the Tensorflow 2.0 [ImageDataGenerator](https://www.tensorflow.org/api_do
 python create_structured_test_set.py
 ``` 
 
-We notice tha
+We notice that the number of classes for which we have available test data is really small, as it is about the 1/5 of the classes. To confront this, we find the classes that are missing test data and add data coming from the training set to them. Moreover, we add 10% of images of the corresponding training class to each test class that is missing data. In case the training class has less than 10 images, then we add just 1 image. To do so, run:
+```
+python fill_structured_test_set.py
+``` 
