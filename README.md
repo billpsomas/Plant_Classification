@@ -59,14 +59,16 @@ function Expand-Tar($tarFile, $dest) {
 And then:
 - Extract the EoL training set:
 ```
-Expand-Tar PlantCLEF2017Train1EOL.tar.gz
+Expand-Tar PlantCLEF2017Train1EOL.tar.gz PlantCLEF2017Train1EOL
+Expand-Tar PlantCLEF2017Train1EOL.tar PlantCLEF2017Train1EOL
 ```
 - Extract the Pl@ntNet test set:
 ```
-Expand-Tar PlantCLEF2017Test.tar.gz
+Expand-Tar PlantCLEF2017Test.tar.gz PlantCLEF2017Test
+Expand-Tar PlantCLEF2017Test.tar PlantCLEF2017Test
 ```
 Of course, once you are using Windows, there is also the naive way of using a software like [7zip](https://www.7-zip.org
-) to unzip those folders in the respective directories.
+) to unzip those datasets in the respective directories.
 
 ## Issues
 There are several issues concering these datasets:
