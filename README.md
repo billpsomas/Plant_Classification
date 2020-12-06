@@ -142,7 +142,7 @@ python tflite_converter.py
 This file converts your .h5 file to a .tflite file.
 
 ## Future Work
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
+- [ ] Remove augmentation from validation data
+- [ ] Make experiments with different models
+- [ ] Make experiments with different optimizers and schedulers
+- [ ] Make a function that plots images alongside with their predicted labels, in order to understand which classes are non trivial for the model
