@@ -102,7 +102,17 @@ In order to split the training set into training and validation, we make use of 
 As long as the long-tail problem is concerned, we choose to augment our data (create fake data), so that each training class has exactly 1000 images. Some of the transformations we conduct are: rescale, rotation, zoom, width shift, height shift, etc. This is not done on the fly, but a priori and the augmented images are stored in ```/data/PlantCLEF2017Train1EOL/augmented_data/```. Is is important to mention that the on the fly augmentation was posing memory error. This whole procedure takes place in ```data_augmentation.py```.
 
 ## Training
-The whole training process takes place 
+The whole training process takes place using the ```train.py```. This file can be seen as the main file of our code. It makes use of some modules that are inside the ```utils``` folder:
+- ```calculate_test_accuracy``` is used to calculate the test set accuracy of a trained model
+- ```plot_figures``` is used to make training and validation accuracy and loss plots
+- ```schedule``` is used as configuration to [LearningRateScheduler](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/schedules/LearningRateSchedule)
+
+It also makes use of some models that are inside the ```models``` folder:
+- [Inceptionv3](https://www.tensorflow.org/api_docs/python/tf/keras/applications/InceptionV3)
+- [ResNet50v2](https://www.tensorflow.org/api_docs/python/tf/keras/applications/ResNet50V2)
+- [NASNetMobile](https://www.tensorflow.org/api_docs/python/tf/keras/applications/NASNetMobile)
+- [InceptionResNetV2](https://www.tensorflow.org/api_docs/python/tf/keras/applications/InceptionResNetV2)
+- PlantNet, which is a custom CNN, with which you are free to play 
 
 ```
 python train.py --gpu-id 0 \
