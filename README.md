@@ -127,3 +127,22 @@ python train.py --epochs 20 \
                 --height 224 \
                 --width 224 
 ```
+
+## More...
+Our code creates a ```checkpoints``` folder inside which all the trained models should be saved. In case you want to load one of those for testing, you can run:
+```
+python load_model_for_test.py
+```
+Be careful to modify the directories!
+
+Finally, this code includes a tflite converter, which can be useful in case you want to use a trained model on a mobile app or something like this:
+```
+python tflite_converter.py
+```
+This file converts your .h5 file to a .tflite file.
+
+## Future Work
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
