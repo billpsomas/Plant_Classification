@@ -112,7 +112,7 @@ It also makes use of some models that are inside the ```models``` folder:
 - [ResNet50v2](https://www.tensorflow.org/api_docs/python/tf/keras/applications/ResNet50V2)
 - [NASNetMobile](https://www.tensorflow.org/api_docs/python/tf/keras/applications/NASNetMobile)
 - [InceptionResNetV2](https://www.tensorflow.org/api_docs/python/tf/keras/applications/InceptionResNetV2)
-- PlantNet, which is a custom CNN, with which you are free to play 
+- PlantNet, which is a custom CNN, with which you are free to play :video_game:
 
 ```
 python train.py --gpu-id 0 \
