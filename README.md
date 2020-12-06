@@ -25,7 +25,7 @@ The first step in order to run this code is to download the necessary libraries.
 ```
 $ pip install -r requirements.txt
 ```
-
+The dollar sign ```$``` means that the following command should be written in terminal. Don't write this sign in terminal. It is just a symbol to make our lifes easier.
 ## Download datasets
 No matter your operating system, whether you are using Windows, Linux, etc., open your terminal and write the following commands in order to download the datasets. Be careful to navigate through your directories in order to download the datasets in a directory you will later remember. We suggest creating a new directory for this named `data` using the commands:
 ```
