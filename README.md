@@ -10,6 +10,16 @@ We use [**Tensorflow 2.0**](https://www.tensorflow.org/) alongside with other li
 
 The documentation that follows is meant to be as detailed as possible, so that anyone can follow, no matter his level.
 
+## Requirements
+- Python3
+- Tensorflow
+- Pandas
+- Matplotlib
+- Pytest-Shutil
+- Argparse
+- Selenium
+- Urllib3
+
 ## Install the necessary libraries
 The first step in order to run this code is to download the necessary libraries. Python has a tremendous amount of libraries and this is one of its strongest advantages. Python comes with a package installer and manager called [PIP](https://pypi.org/project/pip/), which is by default installed from version 3.4 onwards. In order to install the libraries, run the following command on your terminal:
 ```
@@ -89,4 +99,6 @@ python fill_structured_test_set.py
 
 In order to split the training set into training and validation, we make use of ImageDataGenerator. The file ```create_generators.py``` is responsible for defining the three generators, one for training, one for validation and one for test. We choose the 90%/10% split for the training/validation.
 
-As long as the long-tail problem is concerned, we choose to augment our data (create fake data), so that each training class has exactly 1000 images. Some of the transformations we conduct are: rescale, rotation, zoom, width shift, height shift, etc. This is not done on the fly, but a priori and the augmented images are stored in ```/data/PlantCLEF2017Train1EOL/augmented_data/```. This whole procedure can be seen in ```data_augmentation.py```. 
+As long as the long-tail problem is concerned, we choose to augment our data (create fake data), so that each training class has exactly 1000 images. Some of the transformations we conduct are: rescale, rotation, zoom, width shift, height shift, etc. This is not done on the fly, but a priori and the augmented images are stored in ```/data/PlantCLEF2017Train1EOL/augmented_data/```. Is is important to mention that the on the fly augmentation was posing memory error. This whole procedure takes place in ```data_augmentation.py```.
+
+## Training
