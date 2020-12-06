@@ -102,3 +102,17 @@ In order to split the training set into training and validation, we make use of 
 As long as the long-tail problem is concerned, we choose to augment our data (create fake data), so that each training class has exactly 1000 images. Some of the transformations we conduct are: rescale, rotation, zoom, width shift, height shift, etc. This is not done on the fly, but a priori and the augmented images are stored in ```/data/PlantCLEF2017Train1EOL/augmented_data/```. Is is important to mention that the on the fly augmentation was posing memory error. This whole procedure takes place in ```data_augmentation.py```.
 
 ## Training
+The whole training process takes place 
+
+```
+python train.py --gpu-id 0 \
+                --loss Proxy_Anchor \
+                --model bn_inception \
+                --embedding-size 512 \
+                --batch-size 180 \
+                --lr 1e-4 \
+                --dataset cars \
+                --warm 1 \
+                --bn-freeze 1 \
+                --lr-decay-step 20
+```
