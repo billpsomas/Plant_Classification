@@ -114,15 +114,16 @@ It also makes use of some models that are inside the ```models``` folder:
 - [InceptionResNetV2](https://www.tensorflow.org/api_docs/python/tf/keras/applications/InceptionResNetV2)
 - PlantNet, which is a custom CNN, with which you are free to play :video_game:
 
+```train.py``` is parsing arguments like the number of epochs, the model you want to make use, etc. Those arguments are given some default values. In case you want to run using the default values:
 ```
-python train.py --gpu-id 0 \
-                --loss Proxy_Anchor \
-                --model bn_inception \
-                --embedding-size 512 \
-                --batch-size 180 \
-                --lr 1e-4 \
-                --dataset cars \
-                --warm 1 \
-                --bn-freeze 1 \
-                --lr-decay-step 20
+python train.py
+```
+
+In case you want to change those values, follow this formulation:
+```
+python train.py --epochs 20 \
+                --model PlantNet \
+                --batch_size 64 \
+                --height 224 \
+                --width 224 
 ```

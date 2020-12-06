@@ -12,8 +12,9 @@ from models.nasnetmobile import NASNetMobile
 from models.inceptionv3 import InceptionV3
 from models.inceptionresnetv2 import InceptionResNetV2
 
-from calculate_test_accuracy import calculate_test_acccuracy
-from schedule import schedule
+from utils.calculate_test_accuracy import calculate_test_acccuracy
+from utils.schedule import schedule
+from utils.plot_figures import plot_figures
 
 import tensorflow as tf
 import numpy as np
