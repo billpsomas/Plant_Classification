@@ -1,7 +1,7 @@
 import tensorflow as tf
 
-from create_generators import create_generators
-from calculate_test_accuracy import calculate_test_acccuracy
+from utils.create_generators import create_generators
+from utils.calculate_test_accuracy import calculate_test_acccuracy
 
 dataset_dir = "D:/advent/data/100ClassesPlantCLEF2017Train1EOL/augmented_data/"
 test_dataset_dir = "D:/advent/data/100ClassesPlantCLEF2017TestEOL/data/"
